@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+  <%= stylesheet_link_tag 'cadastro', :media => 'all' %>
+</head>
+<body>
+<section>
+ <h1 class="formulario">Formulário</h1>
+ <%= form_for :dados do |form| %>
+  <fieldset>
+    <p class="form-label-1"><%= form.label :nome, "Nome", :class => 'form-label' %></p>
+    <p>
+      <%= form.text_field :nome, :class => 'form-control' %>
+    </p>
+    <p class="form-label-1"><%= form.label :datadenascimento, "Data de nascimento", :class => 'form-label' %></p>
+    <p>
+      <%= form.text_field :datadenascimento, :class => 'form-control' %>
+    </p>
+    <p class="form-label-1"><%= form.label :email, "Email", :class => 'form-label' %></p>
+    <p>
+      <%= form.text_field :email, :class => 'form-control' %>
+    </p>
+  </fieldset>
+  <p class="submit"><%= form.submit "Enviar", :class => 'btn btn-primary' %></p>
+ <% end %>
+</section>
+</body>
